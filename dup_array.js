@@ -85,3 +85,17 @@ arr4.forEach((x, index) =>{
         out4.push(x)
 })
 console.log(out4)
+
+//5.For loop includes():
+
+const arr = [1, 2, 3, 4, 4, 5, 5, 6];
+const output = [];
+
+for (let i = 0; i < arr.length; i++) {
+    if (!output.includes(arr[i])) {   // check if not already in output
+        output.push(arr[i]);          // then add it
+    }
+}
+
+console.log(output); // [1, 2, 3, 4, 5, 6]
+
