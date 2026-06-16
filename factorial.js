@@ -1,20 +1,37 @@
 //factorial = 3*2*1 = 6
 
-factorial = (number) =>{
-//number = 1 because 1 is the base case for factorial.
-    if (number === 1){
-        return 1
-    }
-    return number * factorial(number - 1)
+let num = 6;
+let result = 1;
 
-//return number * factorial(number - 1) is the recursive call to the factorial function.
+// factorial using a loop
+for (let i = 1; i <= num; i++) {
+  result = result * i;
 }
 
-console.log(factorial(5))
+console.log("Factorial of", num, "is", result);
 
-//In this code, we define a function called factorial that takes a number as an argument. 
-// The function uses recursion to calculate the factorial of the given number. 
-// If the number is 1, it returns 1 (base case). Otherwise, it multiplies the number 
-// by the factorial of (number - 1) until it reaches the base case. 
-// Finally, we call the factorial function with the argument 5 and log the result, 
-// which will be 120 (5*4*3*2*1).
+//---------------------------xxxxxxxxxxxxxxxxxxxxxx--------------------
+
+//Explanation of the code:
+
+// Step 1: Declare the number whose factorial we want
+let num = 6;  
+// Here, num = 6. We want to calculate 6! (factorial of 6).
+
+// Step 2: Initialize a result variable to 1
+let result = 1;  
+// This will store the ongoing multiplication.
+// Starting with 1 is important because multiplying by 0 would always give 0.
+
+// Step 3: Create a loop from 1 up to num (inclusive)
+for (let i = 1; i <= num; i++) {
+  // On each iteration, multiply result by the current value of i
+  result = result * i;
+
+  // Optional: You can log intermediate steps to see the calculation
+  // console.log("Iteration:", i, "Intermediate result:", result);
+}
+
+// Step 4: After the loop finishes, result holds the factorial value
+console.log("Factorial of", num, "is", result);  
+// This prints: Factorial of 6 is 720

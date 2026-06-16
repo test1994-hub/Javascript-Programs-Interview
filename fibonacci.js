@@ -1,30 +1,36 @@
-let n1 = 0, n2 = 1
+
 
 // 0,1,1,2,3,5,8,13,21,34
 
-//n1+n2 is the n3 (0+1 is 1)
-let n = 20
+// Step 1: Initialize first two numbers
+let n1 = 0, n2 = 1;
 
-console.log(n1)
-console.log(n2)
-function fibonacci(n) {
-for (let i=3; i<=n; i++){
-    //since i want n fibonacci numbers - so i put i<=n here
-    //since already i gave n1 and n2 - so i start with i= 3
+// Step 2: Decide how many Fibonacci numbers to print
+let n = 20;
 
-    let n3 = n1+n2
-    console.log(n3)
-    n1 = n2
-    n2 = n3
+// Step 3: Print the first two numbers
+console.log(n1);
+console.log(n2);
+
+// Step 4: Loop from 3rd term up to n
+for (let i = 3; i <= n; i++) {
+    // Calculate next number
+    let n3 = n1 + n2;
+
+    // Print it
+    console.log(n3);
+
+    // Update values for next iteration
+    n1 = n2;
+    n2 = n3;
 }
-}
-fibonacci(n)
 
-//The Fibonacci sequence is a series of numbers where each number is the sum of the 
-// two preceding ones, 
-// usually starting with 0 and 1. In this code, we initialize the first 
-// two numbers (n1 and n2) 
-// and then use a loop to calculate the next numbers in the sequence up to the 10th 
-// number. 
-// Each new number (n3) is calculated as the sum of n1 and n2, and then we update n1 
-// and n2 for the next iteration.
+//why i=3
+
+//That means terms 1 and 2 (0 and 1) are already handled.
+
+//The loop is meant to generate the remaining terms.
+
+//So, the next term to calculate is the 3rd term (n3 = n1 + n2 → 0 + 1 = 1).
+
+//Therefore, the loop starts at i = 3 and runs until i <= n.

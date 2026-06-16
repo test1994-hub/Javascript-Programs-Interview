@@ -5,9 +5,8 @@ let str = "hello";
 let arr = [];
 
 // Step 2: Use for...of loop to iterate directly over characters of the string
-for (let ch of str) {
-    // Step 3: Add character to array manually (no push)
-    arr[arr.length] = ch;
+for(let i=0;i<str.length;i++){
+    arr[arr.length] = str[i]
 }
 
 // Step 4: Print the array

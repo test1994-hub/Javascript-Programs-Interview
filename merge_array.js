@@ -1,19 +1,22 @@
-let arr1 = [1,2,3]
-let arr2 = [4,5,6]
+// Step 1: Define two arrays
+let arr1 = [1, 2, 3];
+let arr2 = [4, 5, 6];
 
-function mergeArrays(arr1, arr2){
-    let merge = []
+// Step 2: Create an empty array to hold merged values
+let merge = [];
 
-    for (let i of arr1){
-        merge.push(i)
-    }
-    for (let j of arr2){
-        merge.push(j)
-    }
-    return merge
-    }
+// Step 3: Copy elements of arr1 into merge
+for (let i of arr1) {
+  merge.push(i);
+}
 
-console.log(mergeArrays(arr1,arr2))
+// Step 4: Copy elements of arr2 into merge
+for (let j of arr2) {
+  merge.push(j);
+}
+
+// Step 5: Print the merged array
+console.log("Merged array:", merge);
 
 //I created a new array called merge to hold the combined elements. 
 // I used two separate loops to iterate through each input array (arr1 and arr2) 
