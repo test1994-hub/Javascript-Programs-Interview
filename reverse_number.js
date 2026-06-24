@@ -60,3 +60,17 @@ console.log(reverseNumber(num))
 //}
 
 //console.log(result);  // Output: "e r o h s i K "
+
+6.Reverse by removing whitespaces
+    let str = " K i s h o r e";  
+let result = "";
+
+// loop backwards
+for (let i = str.length - 1; i >= 0; i--) {
+    if (str[i] !== " ") {   // skip spaces
+        result += str[i];
+    }
+}
+
+console.log(result);  // Output: "erohsiK"
+
