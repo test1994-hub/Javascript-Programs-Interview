@@ -74,3 +74,45 @@ for (let i = str.length - 1; i >= 0; i--) {
 
 console.log(result);  // Output: "erohsiK"
 
+7. reverse string from upper to lower manually
+    
+let str = "Apple";
+let result = "";
+
+// loop backwards
+for (let i = str.length - 1; i >= 0; i--) {
+    let ch = str[i];
+
+    // convert uppercase letters to lowercase manually
+    if (ch >= 'A' && ch <= 'Z') {
+        // 'A' = 65, 'a' = 97 → difference is 32
+        let lowerChar = String.fromCharCode(ch.charCodeAt(0) + 32);
+        result += lowerChar;
+    } else {
+        result += ch; // keep as is
+    }
+}
+
+console.log(result);  // Output: "elppa"
+
+8.Lower to Upper case
+
+let str = "Apple";
+let result = "";
+
+for (let i = 0; i < str.length; i++) {
+    let ch = str[i];
+
+    // check if character is lowercase
+    if (ch >= 'a' && ch <= 'z') {
+        let upperChar = String.fromCharCode(ch.charCodeAt(0) - 32);
+        result += upperChar;
+    } else {
+        result += ch; // keep as is
+    }
+}
+
+console.log(result);  // Output: "APPLE"
+
+
+
