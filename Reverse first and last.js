@@ -15,7 +15,7 @@ let result = words.join(" ");
 
 console.log(result);  // Output: "Chennai is from Kishore"
 
-//2Reverse each word in string
+//2.Reverse each word in string
 
 let str = "kishore Kumar from Chennai";
 
