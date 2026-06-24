@@ -11,17 +11,19 @@
 
 
 //2.Without built in method
-let num = 34456; //output as 65443
+let num = 1675;
 
-function reverseNumber(num) {
-    let result = ""
-    for (let digit of num.toString()){
-        result = digit + result
-    }
-return result
+let numstr = num.toString();
+let out = "";
 
+// loop backwards through all characters
+for (let i = numstr.length - 1; i >= 0; i--) {
+    let ch = numstr[i];   // pick character at index i
+    out += ch;            // append to result
 }
-console.log(reverseNumber(num))
+
+console.log(out);  // Output: "5761"
+
 
 //3.reverse string
 // let char = 'Apple'
