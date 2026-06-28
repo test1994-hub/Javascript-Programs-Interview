@@ -31,3 +31,23 @@ for (let i = 0; i < a.length; i++) {
 // print both parts inside square brackets
 console.log("[" + part1 + "]");
 console.log("[" + part2 + "]");
+
+//2.Insert and replace -
+let str = "My name is so and so";
+let out = "{";   // start with opening brace
+
+// loop through each character
+for (let i = 0; i < str.length; i++) {
+    if (str[i] === " ") {
+        // replace space with dash
+        out = out + "-";
+    } else {
+        // keep the character as is
+        out = out + str[i];
+    }
+}
+
+out = out + "}"; // add closing brace
+
+console.log(out);  // {My-name-is-so-and-so}
+
